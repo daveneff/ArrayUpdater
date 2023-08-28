@@ -24,10 +24,10 @@
 
 import Foundation
 
-#if os(iOS) || os(tvOS) || os(watchOS)
-    import UIKit
-#elseif os(macOS)
-    import Cocoa
+#if os(macOS)
+import Cocoa
+#else
+import UIKit
 #endif
 
 public extension Sequence where Iterator.Element == Int {
